@@ -3,8 +3,8 @@ phases:
   install:
     commands:
       - npm install time
-      - aws cloudformation package --template-file template.yaml --s3-bucket ippevent-public
-                                   --output-template-file NewSamTemplate.yaml
+      - aws cloudformation package --template-file template.yml --s3-bucket ippevent-public
+                                   --output-template-file NewSamTemplate.yml
 artifacts:
   type: zip
   files:
