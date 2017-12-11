@@ -15,5 +15,5 @@ Resources:
             Path: /HelloWorld
             Method: GET
       AutoPublishAlias: live
-        DeploymentPreference:
-          Type: AllAtOnce
+      DeploymentPreference:
+        Type: AllAtOnce
