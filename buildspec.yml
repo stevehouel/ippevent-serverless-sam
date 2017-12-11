@@ -4,10 +4,16 @@ phases:
     commands:
       - npm install -g yarn
       - yarn global add aws-sam-local
+      - export PATH=$HOME/.local/bin:$HOME/.yarn/bin:$PATH
+      - sam --version
+
+  pre-build:
+    commands:
       - sam validate
-      - sam local invoke
-      - sam package --template-file template.yml --s3-bucket ippevent-sam
-                                   --output-template-file SamTemplate.yml
+
+   build:
+     commands:
+       - sam package --template-file template.yml --s3-bucket ippevent-sam --output-template-file SamTemplate.yml
 artifacts:
   type: zip
   files:
