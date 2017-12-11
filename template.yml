@@ -1,8 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Outputs the time
+Description: Hello World example
 Resources:
-  TimeFunction:
+  HelloFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
@@ -12,5 +12,5 @@ Resources:
         MyTimeApi:
           Type: Api
           Properties:
-            Path: /TimeResource
+            Path: /HelloWorld
             Method: GET
