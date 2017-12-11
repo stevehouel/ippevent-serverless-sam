@@ -2,10 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install -g aws-sam-local
-      - sam --version
-      - sam validate
-      - sam package --template-file template.yml --s3-bucket ippevent-public
+      - aws cloudformation package --template-file template.yml --s3-bucket ippevent-public
                                    --output-template-file SamTemplate.yml
 artifacts:
   type: zip
