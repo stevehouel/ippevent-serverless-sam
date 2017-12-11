@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - npm install -g yarn
-      - yarn add aws-sam-local
+      - yarn global add aws-sam-local
       - sam validate
       - sam local invoke
       - sam package --template-file template.yml --s3-bucket ippevent-sam
